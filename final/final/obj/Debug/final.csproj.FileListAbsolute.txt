@@ -1,0 +1,23 @@
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.csprojResolveAssemblyReference.cache
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.Form1.resources
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.gerente.resources
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.Properties.Resources.resources
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.trabajadores.resources
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.csproj.GenerateResource.Cache
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\bin\Debug\final.exe.config
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\bin\Debug\final.exe
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\bin\Debug\final.pdb
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.exe
+c:\users\alumno\documents\visual studio 2017\Projects\final\final\obj\Debug\final.pdb
+D:\Kenneth\Desktop\final\final\bin\Debug\final.exe.config
+D:\Kenneth\Desktop\final\final\bin\Debug\final.exe
+D:\Kenneth\Desktop\final\final\bin\Debug\final.pdb
+D:\Kenneth\Desktop\final\final\obj\Debug\final.csprojAssemblyReference.cache
+D:\Kenneth\Desktop\final\final\obj\Debug\final.Form1.resources
+D:\Kenneth\Desktop\final\final\obj\Debug\final.gerente.resources
+D:\Kenneth\Desktop\final\final\obj\Debug\final.Properties.Resources.resources
+D:\Kenneth\Desktop\final\final\obj\Debug\final.trabajadores.resources
+D:\Kenneth\Desktop\final\final\obj\Debug\final.csproj.GenerateResource.cache
+D:\Kenneth\Desktop\final\final\obj\Debug\final.csproj.CoreCompileInputs.cache
+D:\Kenneth\Desktop\final\final\obj\Debug\final.exe
+D:\Kenneth\Desktop\final\final\obj\Debug\final.pdb
