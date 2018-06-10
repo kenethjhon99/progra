@@ -21,3 +21,15 @@ D:\Kenneth\Desktop\final\final\obj\Debug\final.csproj.GenerateResource.cache
 D:\Kenneth\Desktop\final\final\obj\Debug\final.csproj.CoreCompileInputs.cache
 D:\Kenneth\Desktop\final\final\obj\Debug\final.exe
 D:\Kenneth\Desktop\final\final\obj\Debug\final.pdb
+D:\Proyecto\progra\final\final\obj\Debug\final.csprojAssemblyReference.cache
+D:\Proyecto\progra\final\final\obj\Debug\final.Form1.resources
+D:\Proyecto\progra\final\final\obj\Debug\final.gerente.resources
+D:\Proyecto\progra\final\final\obj\Debug\final.Properties.Resources.resources
+D:\Proyecto\progra\final\final\obj\Debug\final.trabajadores.resources
+D:\Proyecto\progra\final\final\obj\Debug\final.csproj.GenerateResource.cache
+D:\Proyecto\progra\final\final\obj\Debug\final.csproj.CoreCompileInputs.cache
+D:\Proyecto\progra\final\final\obj\Debug\final.exe
+D:\Proyecto\progra\final\final\obj\Debug\final.pdb
+D:\Proyecto\progra\final\final\bin\Debug\final.exe.config
+D:\Proyecto\progra\final\final\bin\Debug\final.exe
+D:\Proyecto\progra\final\final\bin\Debug\final.pdb
