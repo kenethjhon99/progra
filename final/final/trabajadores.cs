@@ -60,6 +60,7 @@ namespace final
             agregar.WriteLine(textBox1.Text);
             agregar.WriteLine(textBox2.Text);
             agregar.Close();
+
             limpiar();
         }
         public void limpiar()
@@ -90,9 +91,11 @@ namespace final
                 productoActualizado();
                 verProductos();
 
-
-
             }
+
+        }
+        public void sumatotal()
+        {
 
         }
         public void mostrar()
@@ -143,6 +146,11 @@ namespace final
         private void trabajadores_Load(object sender, EventArgs e)
         {
             mostrar();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
