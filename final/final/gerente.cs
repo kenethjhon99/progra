@@ -18,6 +18,8 @@ namespace final
         String cantidad;
         String precio;
         String codigo;
+        float total;
+        int edit;
         Usuarios nuevo = new Usuarios();
         public gerente()
         {
@@ -37,6 +39,7 @@ namespace final
 
         private void button2_Click(object sender, EventArgs e)
         {
+           // total= 
             nombre = textBox1.Text;
             codigo=textBox2.Text;
             precio = textBox3.Text;
@@ -71,13 +74,14 @@ namespace final
                 tem.Codigo = reader.ReadLine();
                 tem.Prcio = reader.ReadLine();
                 tem.Esistencias = reader.ReadLine();
-                tem.Total = reader.ReadLine();
+             //   tem.Total = reader.ReadLine();
                 producto.Add(tem);
             }
             dataGridView1.DataSource = null;
             dataGridView1.Refresh();
             dataGridView1.DataSource = producto;
             dataGridView1.Refresh();
+            reader.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -87,7 +91,34 @@ namespace final
 
         private void button1_Click(object sender, EventArgs e)
         {
+            panel1.Visible = true;
+            int edit = dataGridView1.CurrentRow.Index;
+            textBox5.Text = producto[edit].Nombreproducto;
+            textBox6.Text = producto[edit].Codigo;
+            textBox7.Text = producto[edit].Prcio;
+            textBox8.Text = producto[edit].Esistencias;
 
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            producto[edit].Nombreproducto = textBox5.Text;
+            producto[edit].Codigo = textBox6.Text;
+            producto[edit].Prcio = textBox7.Text;
+            producto[edit].Esistencias = textBox8.Text;
+
+            String archivo = "producto.txt";
+            FileStream lec = new FileStream(archivo, FileMode.Create, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(lec);
+            for(int h=0;h<producto.Count;h++)
+            {
+                writer.WriteLine(producto[h].Nombreproducto);
+                writer.WriteLine(producto[h].Codigo);
+                writer.WriteLine(producto[h].Prcio);
+                writer.WriteLine(producto[h].Esistencias);
+            }
+            writer.Close();
         }
     }
 }
