@@ -10,14 +10,17 @@ namespace final
     {
         string nombreproducto;
         string codigo;
-        string esistencias;
+        int esistencias;
         string prcio;
-        string total;
+        string costo;
+      //  string total;
 
         public string Nombreproducto { get => nombreproducto; set => nombreproducto = value; }
         public string Codigo { get => codigo; set => codigo = value; }
-        public string Esistencias { get => esistencias; set => esistencias = value; }
+       
         public string Prcio { get => prcio; set => prcio = value; }
-        public string Total { get => total; set => total = value; }
+    //    public string Total { get => total; set => total = value; }
+        public string Costo { get => costo; set => costo = value; } 
+        public int Esistencias { get => esistencias; set => esistencias = value; }
     }
 }

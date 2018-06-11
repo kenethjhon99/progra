@@ -70,6 +70,7 @@
       <DependentUpon>trabajadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs" />
+    <Compile Include="venta.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

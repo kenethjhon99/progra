@@ -18,7 +18,8 @@ namespace final
         String cantidad;
         String precio;
         String codigo;
-        float total;
+        String costo;
+        //float total;
         int edit;
         Usuarios nuevo = new Usuarios();
         public gerente()
@@ -34,7 +35,7 @@ namespace final
 
         private void gerente_Load(object sender, EventArgs e)
         {
-
+            mostrar();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace final
             codigo=textBox2.Text;
             precio = textBox3.Text;
             cantidad=textBox4.Text;
+            costo = textBox9.Text;
             String mercaderia = "producto.txt";
             FileStream escribir = new FileStream(mercaderia, FileMode.Append, FileAccess.Write);
             StreamWriter agregar = new StreamWriter(escribir);
@@ -51,6 +53,7 @@ namespace final
             agregar.WriteLine(codigo);
             agregar.WriteLine(precio);
             agregar.WriteLine(cantidad);
+            agregar.WriteLine(costo);
             agregar.Close();
             mostrar();
             limpiar();
@@ -61,6 +64,7 @@ namespace final
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+            textBox9.Text = "";
         }
         public void mostrar()
         {
@@ -73,8 +77,9 @@ namespace final
                 tem.Nombreproducto = reader.ReadLine();
                 tem.Codigo = reader.ReadLine();
                 tem.Prcio = reader.ReadLine();
-                tem.Esistencias = reader.ReadLine();
-             //   tem.Total = reader.ReadLine();
+                tem.Esistencias = Convert.ToInt32(reader.ReadLine());
+                tem.Costo = reader.ReadLine();
+              //   tem.Total = reader.ReadLine();
                 producto.Add(tem);
             }
             dataGridView1.DataSource = null;
@@ -96,7 +101,8 @@ namespace final
             textBox5.Text = producto[edit].Nombreproducto;
             textBox6.Text = producto[edit].Codigo;
             textBox7.Text = producto[edit].Prcio;
-            textBox8.Text = producto[edit].Esistencias;
+            textBox8.Text =Convert.ToString(producto[edit].Esistencias);
+            textBox10.Text = producto[edit].Costo;
 
 
         }
@@ -106,7 +112,8 @@ namespace final
             producto[edit].Nombreproducto = textBox5.Text;
             producto[edit].Codigo = textBox6.Text;
             producto[edit].Prcio = textBox7.Text;
-            producto[edit].Esistencias = textBox8.Text;
+            producto[edit].Esistencias = Convert.ToInt32(textBox8.Text);
+            producto[edit].Costo = textBox10.Text;
 
             String archivo = "producto.txt";
             FileStream lec = new FileStream(archivo, FileMode.Create, FileAccess.Write);
@@ -117,6 +124,7 @@ namespace final
                 writer.WriteLine(producto[h].Codigo);
                 writer.WriteLine(producto[h].Prcio);
                 writer.WriteLine(producto[h].Esistencias);
+                writer.WriteLine(producto[h].Costo);
             }
             writer.Close();
         }
