@@ -41,24 +41,31 @@ namespace final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = usua;
-            textBox2.Text = contra;
+            usua = textBox1.Text;
+            contra = textBox2.Text;
             for (int a = 0; a < usuario.Count; a++)
                 {
-                if (usua == (usuario[a].Usuario))&(contra==(usuario[a].Contraseña))&((usuario[a].TipoDeUsuario==admin))
+                if(usuario[a].TipoDeUsuario=="admin")
                 {
-                    gerente b = new gerente(usuario[a]);
-                    b.Show();
-                } 
+                    if ((usua == (usuario[a].Usuario)) && (contra == (usuario[a].Contraseña)))
+                    {
+                        gerente b = new gerente(usuario[a]);
+                        b.Show();
+                    }
+                }
+                 
 
             }
             for (int z = 0; z < usuario.Count; z++)
             {
-                if(usua==(usuario[z].Usuario))
+                if (usuario[z].TipoDeUsuario == "ventas")
                 {
-                    trabajadores q = new trabajadores();
-                    q.Show();
+                    if (usua == (usuario[z].Usuario)&&(contra==(usuario[z].Contraseña)))
+                    {
+                        trabajadores q = new trabajadores();
+                        q.Show();
 
+                    }
                 }
             }
         }

@@ -50,6 +50,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(679, 454);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -59,6 +60,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -88,7 +90,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(237, 66);
+            this.textBox2.Location = new System.Drawing.Point(237, 65);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;

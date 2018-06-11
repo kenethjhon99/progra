@@ -21,7 +21,7 @@ namespace final
         Usuarios nuevo = new Usuarios();
         public gerente()
         {
-
+            mostrar();
             InitializeComponent();
         }
         public gerente(Usuarios entrada)
@@ -37,14 +37,57 @@ namespace final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = nombre;
-            textBox2.Text = codigo;
-            textBox3.Text = precio;
-            textBox4.Text = cantidad;
+            nombre = textBox1.Text;
+            codigo=textBox2.Text;
+            precio = textBox3.Text;
+            cantidad=textBox4.Text;
             String mercaderia = "producto.txt";
-            FileStream escribir = new FileStream(mercaderia, FileMode.Open, FileAccess.Write);
-            StreamWriter modificar = new StreamWriter(escribir);
-            
+            FileStream escribir = new FileStream(mercaderia, FileMode.Append, FileAccess.Write);
+            StreamWriter agregar = new StreamWriter(escribir);
+            agregar.WriteLine(nombre);
+            agregar.WriteLine(codigo);
+            agregar.WriteLine(precio);
+            agregar.WriteLine(cantidad);
+            agregar.Close();
+            mostrar();
+            limpiar();
+        }
+        public void limpiar()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+        }
+        public void mostrar()
+        {
+            string mercaderia = "producto.txt";
+            FileStream leer = new FileStream(mercaderia, FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(leer);
+            while (reader.Peek() > -1)
+            {
+                producto tem = new producto();
+                tem.Nombreproducto = reader.ReadLine();
+                tem.Codigo = reader.ReadLine();
+                tem.Prcio = reader.ReadLine();
+                tem.Esistencias = reader.ReadLine();
+                tem.Total = reader.ReadLine();
+                producto.Add(tem);
+            }
+            dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = producto;
+            dataGridView1.Refresh();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
