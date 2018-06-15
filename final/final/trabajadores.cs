@@ -212,7 +212,7 @@ namespace final
                 writer.WriteLine(ventas[y].Total);
             }
             writer.WriteLine("-1"); //Me servira para saber cuando termina un detalle de venta
-
+            writer.Close();
         }
     }
 }

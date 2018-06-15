@@ -40,7 +40,9 @@ namespace final
 
         private void button2_Click(object sender, EventArgs e)
         {
-           // total= 
+            // total= 
+            dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
             nombre = textBox1.Text;
             codigo=textBox2.Text;
             precio = textBox3.Text;
@@ -68,6 +70,9 @@ namespace final
         }
         public void mostrar()
         {
+            dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
+            producto = new List<producto>();
             string mercaderia = "producto.txt";
             FileStream leer = new FileStream(mercaderia, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(leer);
