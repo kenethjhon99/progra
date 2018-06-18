@@ -4,3 +4,9 @@ admin
 vendedor
 1234
 ventas
+vendedor2
+1234
+ventas
+vendedor3
+1234
+ventas

@@ -8,12 +8,13 @@ namespace final
 {
     public class Factura
     {
-        String usuario;
+        String cliente;
+        String nit;
         DateTime fecha;
         float total;
-        String cliente;
         float dinero;
         float cambio;
+        String usuario;
 
         public string Usuario { get => usuario; set => usuario = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
@@ -21,5 +22,6 @@ namespace final
         public string Cliente { get => cliente; set => cliente = value; }
         public float Dinero { get => dinero; set => dinero = value; }
         public float Cambio { get => cambio; set => cambio = value; }
+        public string Nit { get => nit; set => nit = value; }
     }
 }

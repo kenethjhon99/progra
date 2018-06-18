@@ -92,7 +92,6 @@ namespace final
                 tem.Prcio = reader.ReadLine();
                 tem.Esistencias = Convert.ToInt32(reader.ReadLine());
                 tem.Costo = reader.ReadLine();
-              //   tem.Total = reader.ReadLine();
                 producto.Add(tem);
             }
             dataGridView1.DataSource = null;
@@ -140,6 +139,12 @@ namespace final
                 writer.WriteLine(producto[h].Costo);
             }
             writer.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ReportesVista n = new ReportesVista();
+            n.Show();
         }
     }
 }

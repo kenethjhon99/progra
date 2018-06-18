@@ -3,7 +3,6 @@ s7d54f
 1
 10
 0.70
-<<<<<<< HEAD
 lapiz
 sdf132
 2
@@ -49,7 +48,6 @@ mina
 3
 5
 1
-=======
 goma
 4561dsf
 5
@@ -75,4 +73,3 @@ duroport
 10
 5
 8
->>>>>>> master

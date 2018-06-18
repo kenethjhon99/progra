@@ -45,3 +45,4 @@ D:\Keneth\Proyecto\progra\final\final\obj\Debug\final.csproj.GenerateResource.ca
 D:\Keneth\Proyecto\progra\final\final\obj\Debug\final.csproj.CoreCompileInputs.cache
 D:\Keneth\Proyecto\progra\final\final\obj\Debug\final.exe
 D:\Keneth\Proyecto\progra\final\final\obj\Debug\final.pdb
+D:\Keneth\Proyecto\progra\final\final\obj\Debug\final.ReportesVista.resources

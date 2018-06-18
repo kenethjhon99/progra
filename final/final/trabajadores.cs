@@ -18,8 +18,14 @@ namespace final
         List<venta> ventas = new List<venta>();
         String nit;
         String nombre;
+        String vendedorActual;
         public trabajadores()
         {
+            InitializeComponent();
+        }
+        public trabajadores(String vendedor)
+        {
+            vendedorActual = vendedor;
             InitializeComponent();
         }
 
@@ -178,6 +184,10 @@ namespace final
         {
             actualizarArchivoProductos();
             registarDetalleVenta();
+            registrarFactura();
+            MessageBox.Show("Venta realizada");
+            dataGridView2.DataSource = null;
+            dataGridView2.Refresh();
         }
         public void actualizarArchivoProductos()
         {
@@ -199,10 +209,6 @@ namespace final
             string archivo = "detalleVenta.txt";
             FileStream stream = new FileStream(archivo, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(stream);
-            //Generare un codigo aleatorio
-            Random rnd = new Random();
-            string codigoDeVenta = Convert.ToString(rnd.Next(999999999)); // me da un numero de 0 a 99999999 para que la probabildad sea poca de que me de un numero igual
-            writer.WriteLine(codigoDeVenta);
             // si estos campos estan llenos procedo a guardar los datos
             for (int y = 0; y < ventas.Count; y++)
             {
@@ -211,7 +217,20 @@ namespace final
                 writer.WriteLine(ventas[y].Existencias);
                 writer.WriteLine(ventas[y].Total);
             }
-            writer.WriteLine("-1"); //Me servira para saber cuando termina un detalle de venta
+            writer.Close();
+        }
+        public void registrarFactura()
+        {
+            string archivo = "factura.txt";
+            FileStream stream = new FileStream(archivo, FileMode.Append, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(stream);
+            writer.WriteLine(textBox1.Text);
+            writer.WriteLine(textBox2.Text);
+            writer.WriteLine(Convert.ToString(dateTimePicker1.Value));
+            writer.WriteLine(label4.Text);
+            writer.WriteLine(textBox4.Text);
+            writer.WriteLine(label5.Text);
+            writer.WriteLine(vendedorActual);
             writer.Close();
         }
     }

@@ -1,0 +1,28 @@
+12
+fa;lkdfe
+17/06/2018 6:02:40 a. m.
+28
+30
+2
+vendedor
+12
+fa;lkdfe
+14/06/2018 8:03:35 a. m.
+45
+50
+5
+vendedor2
+12
+fa;lkdfe
+15/06/2018 10:05:49 a. m.
+40
+50
+10
+vendedor
+789465
+anastacio
+15/06/2018 8:43:55 a. m.
+151
+200
+49
+vendedor2

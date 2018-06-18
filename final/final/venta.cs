@@ -9,8 +9,8 @@ namespace final
     class venta
     {
         string producto;
-        int existencias;
         float precio;
+        int existencias;
         float total;
 
         public string Producto { get => producto; set => producto = value; }

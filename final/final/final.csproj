@@ -64,6 +64,12 @@
     <Compile Include="producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportesVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesVista.Designer.cs">
+      <DependentUpon>ReportesVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="trabajadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportesVista.resx">
+      <DependentUpon>ReportesVista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="trabajadores.resx">
       <DependentUpon>trabajadores.cs</DependentUpon>
     </EmbeddedResource>

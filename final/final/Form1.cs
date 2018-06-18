@@ -62,7 +62,7 @@ namespace final
                 {
                     if (usua == (usuario[z].Usuario)&&(contra==(usuario[z].Contraseña)))
                     {
-                        trabajadores q = new trabajadores();
+                        trabajadores q = new trabajadores(usua);
                         q.Show();
 
                     }
