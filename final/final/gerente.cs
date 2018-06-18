@@ -56,6 +56,7 @@ namespace final
             agregar.WriteLine(costo);
             agregar.Close();
             mostrar();
+            actualizar();
             limpiar();
         }
         public void limpiar()
@@ -65,6 +66,13 @@ namespace final
             textBox3.Text = "";
             textBox4.Text = "";
             textBox9.Text = "";
+        }
+        public void actualizar()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = producto;
+            dataGridView1.Refresh();
         }
         public void mostrar()
         {
