@@ -3,6 +3,7 @@ s7d54f
 1
 10
 0.70
+<<<<<<< HEAD
 lapiz
 sdf132
 2
@@ -48,3 +49,30 @@ mina
 3
 5
 1
+=======
+goma
+4561dsf
+5
+15
+3
+borrador
+651sdfa
+2
+6
+1
+lapiz
+s5df132as
+2
+10
+1
+silicon
+6451sa
+5
+15
+3
+duroport
+132fs
+10
+5
+8
+>>>>>>> master

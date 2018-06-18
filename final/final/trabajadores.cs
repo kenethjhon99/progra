@@ -90,6 +90,7 @@ namespace final
                 ventas.Add(temp);
                 productoActualizado();
                 verProductos();
+                CalcularSubTotal();
 
             }
 
@@ -97,6 +98,15 @@ namespace final
         public void sumatotal()
         {
 
+        }
+        public void CalcularSubTotal()
+        {
+            float subTotal = 0;
+            for (int x = 0; x < ventas.Count; x++)
+            {
+                subTotal = subTotal + ventas[x].Total;
+            }
+            label4.Text = Convert.ToString(subTotal);
         }
         public void mostrar()
         {
@@ -150,7 +160,59 @@ namespace final
 
         private void button4_Click(object sender, EventArgs e)
         {
-           
+            float cambio = 0;
+            float dinero = float.Parse(textBox4.Text);
+            float subTotal = float.Parse(label4.Text);
+            if (dinero < subTotal)
+            {
+                MessageBox.Show("No se puede realizar operacion, verifique cantidad");
+            }
+            else
+            {
+                cambio = dinero - subTotal;
+                label5.Text = Convert.ToString(cambio);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            actualizarArchivoProductos();
+            registarDetalleVenta();
+        }
+        public void actualizarArchivoProductos()
+        {
+            string archivo = "productos.txt";
+            FileStream stream = new FileStream(archivo, FileMode.Create, FileAccess.Write); //este tipo porque voy a reescribir el archivo con los nuevos productos
+            StreamWriter writer = new StreamWriter(stream);
+            for (int i = 0; i < producto.Count; i++) // en listado esta la lista actualizada de todos los productos
+            {
+                writer.WriteLine(producto[i].Nombreproducto);
+                writer.WriteLine(producto[i].Codigo);
+                writer.WriteLine(producto[i].Costo);
+                writer.WriteLine(producto[i].Prcio);
+                writer.WriteLine(producto[i].Esistencias);
+            }
+            writer.Close();
+        }
+        public void registarDetalleVenta()
+        {
+            string archivo = "detalleVenta.txt";
+            FileStream stream = new FileStream(archivo, FileMode.Append, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(stream);
+            //Generare un codigo aleatorio
+            Random rnd = new Random();
+            string codigoDeVenta = Convert.ToString(rnd.Next(999999999)); // me da un numero de 0 a 99999999 para que la probabildad sea poca de que me de un numero igual
+            writer.WriteLine(codigoDeVenta);
+            // si estos campos estan llenos procedo a guardar los datos
+            for (int y = 0; y < ventas.Count; y++)
+            {
+                writer.WriteLine(ventas[y].Producto);
+                writer.WriteLine(ventas[y].Precio);
+                writer.WriteLine(ventas[y].Existencias);
+                writer.WriteLine(ventas[y].Total);
+            }
+            writer.WriteLine("-1"); //Me servira para saber cuando termina un detalle de venta
+            writer.Close();
         }
     }
 }
